@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
+  <title>Mesai Takip - Talebiniz Alındı</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light dark;
+      --bg:#f6f8f8; --surface:#fff; --text:#16211f; --muted:#64706d;
+      --border:#dfe7e5; --accent:#0f766e; --accent-soft:#e7f5f2;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0f1514; --surface:#151d1b; --text:#edf4f2; --muted:#a7b3b0; --border:#293432; --accent:#5eead4; --accent-soft:#16312d; }
+    }
+    body {
+      margin:0; min-height:100vh; display:grid; place-items:center;
+      padding:24px; background:var(--bg); color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    .card {
+      width:min(560px,100%); background:var(--surface); border:1px solid var(--border);
+      border-radius:24px; padding:36px; text-align:center;
+    }
+    .icon {
+      width:64px; height:64px; border-radius:50%; display:grid; place-items:center;
+      margin:0 auto 18px; background:var(--accent-soft); color:var(--accent);
+      font-size:30px; font-weight:800;
+    }
+    h1 { margin:0 0 10px; font-size:30px; letter-spacing:-.03em; }
+    p { margin:0 0 24px; color:var(--muted); line-height:1.65; }
+    a {
+      display:inline-flex; min-height:44px; align-items:center; justify-content:center;
+      padding:10px 16px; border-radius:12px; text-decoration:none; font-weight:750;
+      background:#0f766e; color:#fff;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="icon">✓</div>
+    <h1>Talebiniz alındı</h1>
+    <p>Destek mesajınız başarıyla gönderildi. Gerekli olduğunda belirttiğiniz e-posta adresi üzerinden dönüş yapılacaktır.</p>
+    <a href="./">Destek sayfasına dön</a>
+  </main>
+</body>
+</html>
