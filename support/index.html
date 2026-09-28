@@ -1,104 +1,93 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0f766e">
-  <meta name="description" content="Mesai Takip uygulaması için resmî destek, sık sorulan sorular ve destek talep formu.">
-  <title>Destek · Mesai Takip</title>
-  <link rel="icon" type="image/png" href="../assets/app-icon.png">
+  <title>Mesai Takip | Destek Merkezi</title>
+  <meta name="description" content="Mesai Takip destek merkezi, sık sorulan sorular ve destek talebi formu.">
+  <link rel="canonical" href="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/support/">
+  <link rel="icon" type="image/png" href="../assets/mesaitakip-logo.png">
   <link rel="apple-touch-icon" href="../assets/app-icon.png">
+  <meta property="og:title" content="Mesai Takip | Destek Merkezi">
+  <meta property="og:description" content="Mesai Takip için yardım, sık sorulan sorular ve destek talebi.">
+  <meta property="og:image" content="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/assets/app-icon.png">
   <link rel="stylesheet" href="../assets/site.css">
 </head>
 <body>
-  <a class="skip" href="#icerik">İçeriğe geç</a>
-  <header class="site-header">
-    <div class="wrap nav">
-      <a class="brand" href="../" aria-label="Mesai Takip ana sayfa">
-        <img src="../assets/app-icon.png" alt="Mesai Takip uygulama simgesi">
-        <span class="brand-copy"><span class="brand-title">Mesai Takip</span><span class="brand-sub">Resmî destek ve gizlilik merkezi</span></span>
-      </a>
-      <nav class="nav-links" aria-label="Ana menü">
-        <a href="../">Gizlilik</a>
-        <a href="./" aria-current="page">Destek</a>
-      </nav>
-    </div>
-  </header>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="../" aria-label="Mesai Takip ana sayfa">
+      <img class="brand-logo" src="../assets/mesaitakip-logo.png" alt="Mesai Takip logosu">
+      <span class="brand-copy"><span>Mesai Takip</span><small>Maaş &amp; Mesai</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="../">Gizlilik</a>
+      <a href="./" aria-current="page">Destek</a>
+    </nav>
+  </div>
+</header>
 
-  <main id="icerik" class="wrap">
-    <section class="hero">
-      <div>
-        <span class="eyebrow">Mesai Takip Destek</span>
-        <h1>Yardım için buradayız.</h1>
-        <p>Sık sorulan konulara göz atın veya aşağıdaki form üzerinden doğrudan destek talebi gönderin.</p>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <span class="kicker">Resmî Destek Merkezi</span>
+      <h1>Size nasıl yardımcı olabiliriz?</h1>
+      <p>Mesai Takip ile ilgili teknik sorun, hesaplama sorusu, yedekleme problemi veya geliştirme önerinizi bize iletebilirsiniz.</p>
+      <div class="meta">
+        <span class="pill"><strong>Destek</strong> E-posta üzerinden</span>
+        <span class="pill"><strong>Veriler</strong> Cihazınızda saklanır</span>
       </div>
-      <aside class="meta-card">
-        <div class="meta-label">Destek kanalı</div>
-        <div class="meta-value">E-posta destek formu</div>
-      </aside>
-    </section>
-
-    <article class="card">
-      <h2>Uygulama Hakkında</h2>
-      <p>Mesai Takip; maaş, mesai, izin, rapor, avans, kesinti ve çalışma kayıtlarını cihaz üzerinde takip etmeye yardımcı olur.</p>
-
-      <h2>Sık Sorulan Sorular</h2>
-      <div class="faq"><strong>Verilerim nerede saklanıyor?</strong><p>Mevcut sürümde uygulama kayıtları cihazınızda yerel olarak saklanır.</p></div>
-      <div class="faq"><strong>Hesap oluşturmam gerekiyor mu?</strong><p>Hayır. Mevcut sürümde üyelik veya giriş sistemi bulunmamaktadır.</p></div>
-      <div class="faq"><strong>Yedekleme yapabilir miyim?</strong><p>Evet. Uygulama içindeki yedekleme ve dışa aktarma seçeneklerini kullanabilirsiniz.</p></div>
-
-      <h2 id="talep">Destek Talebi Gönder</h2>
-      <p>Yaşadığınız sorunu mümkün olduğunca açık yazın. Talebiniz doğrudan Mesai Takip destek adresine iletilir.</p>
-
-      <form class="support-form" action="https://formsubmit.co/yucel.sonmez2710@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Yeni Mesai Takip Destek Talebi">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/support/thanks.html">
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
-
-        <div class="field-row">
-          <div class="field">
-            <label for="name">Ad Soyad</label>
-            <input id="name" name="Ad Soyad" type="text" autocomplete="name" placeholder="Adınız ve soyadınız" required>
-          </div>
-          <div class="field">
-            <label for="email">E-posta</label>
-            <input id="email" name="email" type="email" autocomplete="email" placeholder="ornek@eposta.com" required>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="subject">Konu</label>
-          <select id="subject" name="Konu" required>
-            <option value="" selected disabled>Destek konusunu seçin</option>
-            <option>Teknik sorun</option>
-            <option>Hesaplama / kayıt sorunu</option>
-            <option>Yedekleme / geri yükleme</option>
-            <option>Öneri</option>
-            <option>Diğer</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="message">Mesaj</label>
-          <textarea id="message" name="Mesaj" minlength="10" placeholder="Sorunu, gördüğünüz hata mesajını ve mümkünse hangi adımda oluştuğunu yazın." required></textarea>
-        </div>
-
-        <p class="form-note">Gönderim sırasında formda yazdığınız bilgiler FormSubmit üzerinden iletilir. Ayrıntılar için <a href="../">Gizlilik Politikası</a> sayfasını inceleyebilirsiniz.</p>
-        <button class="button primary" type="submit">Destek Talebi Gönder</button>
-      </form>
-
-      <h2>Gizlilik ve Veri Güvenliği</h2>
-      <p>Uygulamanın veri saklama yaklaşımı ve destek formunun işleyişi hakkında ayrıntılı bilgi için gizlilik politikasını inceleyebilirsiniz.</p>
-      <div class="actions"><a class="button" href="../">Gizlilik Politikasını Görüntüle</a></div>
-    </article>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-row">
-      <span>© 2026 Mesai Takip · Yücel Sönmez</span>
-      <nav class="footer-links" aria-label="Alt menü"><a href="../">Gizlilik</a><a href="./">Destek</a></nav>
     </div>
-  </footer>
+    <img class="hero-mark" src="../assets/mesaitakip-logo.png" alt="">
+  </section>
+
+  <section class="section-grid" aria-label="Hızlı bilgiler">
+    <div class="mini-card"><h3>Hesap gerektirmez</h3><p>Mesai Takip mevcut sürümde üyelik veya giriş istemez.</p></div>
+    <div class="mini-card"><h3>Yerel veri saklama</h3><p>Uygulama kayıtları cihazınızda yerel olarak tutulur.</p></div>
+  </section>
+
+  <article class="card" style="margin-top:14px">
+    <h2>Sık Sorulan Sorular</h2>
+    <div class="faq"><strong>Verilerim nerede saklanıyor?</strong><p>Mevcut sürümde kayıtlar cihazınızda yerel olarak saklanır.</p></div>
+    <div class="faq"><strong>Hesap oluşturmam gerekiyor mu?</strong><p>Hayır. Mevcut sürümde üyelik veya giriş sistemi bulunmamaktadır.</p></div>
+    <div class="faq"><strong>Yedekleme yapabilir miyim?</strong><p>Evet. Uygulama içindeki yedekleme ve dışa aktarma seçeneklerini kullanabilirsiniz.</p></div>
+
+    <h2 id="destek">Destek Talebi Oluştur</h2>
+    <p>Sorunu mümkün olduğunca açık yazın. Gerekli olduğunda belirttiğiniz e-posta adresi üzerinden size dönüş yapılır.</p>
+
+    <form class="form" action="https://formsubmit.co/yucel.sonmez2710@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Yeni Mesai Takip Destek Talebi">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/support/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="field-row">
+        <div class="field"><label for="name">Ad Soyad</label><input id="name" name="Ad Soyad" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="email">E-posta</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+      </div>
+
+      <div class="field">
+        <label for="subject">Konu</label>
+        <select id="subject" name="Konu" required>
+          <option value="" selected disabled>Bir konu seçin</option>
+          <option>Teknik sorun</option><option>Hesaplama / kayıt sorunu</option>
+          <option>Yedekleme / geri yükleme</option><option>Öneri</option><option>Diğer</option>
+        </select>
+      </div>
+
+      <div class="field"><label for="message">Mesaj</label><textarea id="message" name="Mesaj" minlength="10" placeholder="Yaşadığınız sorunu, hangi ekranda olduğunu ve mümkünse ne beklediğinizi yazın." required></textarea></div>
+
+      <p class="form-note">Gönderdiğiniz destek formundaki bilgiler yalnızca talebinizi iletmek ve yanıtlamak amacıyla FormSubmit üzerinden işlenir. Ayrıntılar için <a href="../">Gizlilik Politikası</a>.</p>
+      <button class="button primary" type="submit">Destek Talebi Gönder</button>
+    </form>
+  </article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© 2026 Mesai Takip · Yücel Sönmez</span>
+    <div class="footer-links"><a href="../">Gizlilik</a><a href="./">Destek</a></div>
+  </div>
+</footer>
 </body>
 </html>
