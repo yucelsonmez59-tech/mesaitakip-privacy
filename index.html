@@ -1,188 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0f766e">
-  <title>Mesai Takip - Gizlilik Politikası</title>
-  <meta name="description" content="Mesai Takip uygulaması gizlilik politikası">
-  <style>
-    * { box-sizing: border-box; }
-    :root {
-      color-scheme: light dark;
-      --bg: #f6f8f8;
-      --surface: #ffffff;
-      --text: #16211f;
-      --muted: #64706d;
-      --border: #dfe7e5;
-      --accent: #0f766e;
-      --accent-soft: #e7f5f2;
-      --shadow: 0 16px 40px rgba(15, 118, 110, .08);
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0f1514;
-        --surface: #151d1b;
-        --text: #edf4f2;
-        --muted: #a7b3b0;
-        --border: #293432;
-        --accent: #5eead4;
-        --accent-soft: #16312d;
-        --shadow: none;
-      }
-    }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    .wrap {
-      width: min(920px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: color-mix(in srgb, var(--bg) 88%, transparent);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav {
-      min-height: 68px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .brand {
-      color: var(--text);
-      text-decoration: none;
-      font-weight: 800;
-      letter-spacing: -.02em;
-      font-size: 18px;
-    }
-    .links {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-weight: 650;
-      padding: 9px 12px;
-      border-radius: 10px;
-    }
-    .links a:hover,
-    .links a[aria-current="page"] {
-      color: var(--accent);
-      background: var(--accent-soft);
-    }
-    main { padding: 48px 0 72px; }
-    .hero { margin-bottom: 24px; }
-    .eyebrow {
-      display: inline-block;
-      color: var(--accent);
-      background: var(--accent-soft);
-      border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 13px;
-      font-weight: 750;
-      margin-bottom: 12px;
-    }
-    h1 {
-      font-size: clamp(32px, 6vw, 48px);
-      line-height: 1.08;
-      letter-spacing: -.035em;
-      margin: 0 0 10px;
-    }
-    .date { color: var(--muted); margin: 0; }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: clamp(24px, 5vw, 42px);
-      box-shadow: var(--shadow);
-    }
-    h2 {
-      font-size: 20px;
-      letter-spacing: -.015em;
-      margin: 32px 0 8px;
-    }
-    h2:first-of-type { margin-top: 24px; }
-    p { margin: 8px 0 14px; }
-    .footer {
-      margin-top: 24px;
-      color: var(--muted);
-      font-size: 14px;
-      text-align: center;
-    }
-    .footer a { color: var(--accent); text-decoration: none; font-weight: 650; }
-    @media (max-width: 560px) {
-      .nav { min-height: 62px; }
-      .brand { font-size: 16px; }
-      .links a { padding: 8px 9px; font-size: 14px; }
-      main { padding-top: 32px; }
-    }
-  </style>
+  <meta name="description" content="Mesai Takip uygulamasının gizlilik politikası ve veri işleme bilgileri.">
+  <title>Gizlilik Politikası · Mesai Takip</title>
+  <link rel="icon" type="image/png" href="./assets/app-icon.png">
+  <link rel="apple-touch-icon" href="./assets/app-icon.png">
+  <link rel="stylesheet" href="./assets/site.css">
 </head>
 <body>
-  <header>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+  <header class="site-header">
     <div class="wrap nav">
-      <a class="brand" href="./">Mesai Takip</a>
-      <nav class="links" aria-label="Ana menü">
+      <a class="brand" href="./" aria-label="Mesai Takip ana sayfa">
+        <img src="./assets/app-icon.png" alt="Mesai Takip uygulama simgesi">
+        <span class="brand-copy"><span class="brand-title">Mesai Takip</span><span class="brand-sub">Resmî destek ve gizlilik merkezi</span></span>
+      </a>
+      <nav class="nav-links" aria-label="Ana menü">
         <a href="./" aria-current="page">Gizlilik</a>
         <a href="./support/">Destek</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap">
+  <main id="icerik" class="wrap">
     <section class="hero">
-      <span class="eyebrow">Yasal</span>
-      <h1>Gizlilik Politikası</h1>
-      <p class="date">Son güncelleme: 28 Eylül 2026</p>
+      <div>
+        <span class="eyebrow">Gizlilik ve Veri Güvenliği</span>
+        <h1>Verileriniz cihazınızda kalır.</h1>
+        <p>Mesai Takip'in mevcut sürümünde uygulama içindeki çalışma ve maaş kayıtları geliştiriciye gönderilmez. Aşağıda hangi verilerin nasıl işlendiğini açıkça bulabilirsiniz.</p>
+      </div>
+      <aside class="meta-card" aria-label="Politika bilgileri">
+        <div class="meta-label">Son güncelleme</div>
+        <div class="meta-value">28 Eylül 2026</div>
+      </aside>
     </section>
 
     <article class="card">
-      <p>Mesai Takip, kullanıcıların çalışma, mesai, maaş, izin, rapor, avans, kesinti ve benzeri çalışma kayıtlarını takip etmelerine yardımcı olmak amacıyla geliştirilmiştir.</p>
+      <p class="intro">Mesai Takip; maaş, mesai, izin, rapor, avans, kesinti ve benzeri çalışma kayıtlarını düzenli şekilde takip etmeye yardımcı olmak amacıyla geliştirilmiştir.</p>
+
+      <div class="grid">
+        <div class="info-tile"><strong>Yerel saklama</strong><span>Uygulama kayıtları mevcut sürümde cihazınızda tutulur.</span></div>
+        <div class="info-tile"><strong>Hesap gerektirmez</strong><span>Üyelik, giriş veya çevrimiçi kullanıcı hesabı bulunmaz.</span></div>
+        <div class="info-tile"><strong>Reklam ve takip yok</strong><span>Mevcut sürümde reklam ağı, takip SDK'sı veya üçüncü taraf analiz hizmeti kullanılmaz.</span></div>
+        <div class="info-tile"><strong>Kontrol sizde</strong><span>Yedek ve dışa aktarma dosyalarının saklanması ve paylaşılması sizin kontrolünüzdedir.</span></div>
+      </div>
 
       <h2>1. Toplanan Veriler</h2>
-      <p>Mesai Takip'in mevcut sürümü kullanıcılarından herhangi bir kişisel veri toplamaz, geliştiriciye veya üçüncü taraflara göndermez.</p>
+      <p>Mesai Takip'in mevcut sürümü, uygulama içinde oluşturduğunuz kişisel çalışma kayıtlarını geliştiriciye veya üçüncü taraflara göndermez.</p>
       <p>Uygulamaya girilen maaş, mesai, izin, rapor, avans, kesinti ve diğer kayıtlar kullanıcının kendi cihazında yerel olarak saklanır.</p>
 
       <h2>2. Hesap ve Üyelik</h2>
       <p>Mesai Takip'te kullanıcı hesabı oluşturma, üyelik veya giriş sistemi bulunmamaktadır.</p>
 
       <h2>3. Sunucu ve Bulut Hizmetleri</h2>
-      <p>Uygulamanın mevcut sürümünde kullanıcı verilerini saklayan bir sunucu veya bulut tabanlı kullanıcı hesabı sistemi bulunmamaktadır.</p>
+      <p>Uygulamanın mevcut sürümünde kullanıcı kayıtlarını saklayan geliştiriciye ait bir sunucu veya bulut tabanlı kullanıcı hesabı sistemi bulunmamaktadır.</p>
 
       <h2>4. Reklam ve Analitik</h2>
       <p>Mesai Takip'in mevcut sürümünde reklam ağı, kullanıcı takip sistemi veya üçüncü taraf analiz hizmeti kullanılmamaktadır.</p>
 
       <h2>5. Veri Paylaşımı</h2>
       <p>Mesai Takip uygulamasının mevcut sürümü, uygulama içinde oluşturulan kullanıcı verilerini geliştiriciye veya üçüncü taraflara göndermez.</p>
-      <p>Destek sayfasındaki iletişim formunu kullanmayı tercih ederseniz adınız, e-posta adresiniz, konu ve mesaj içeriğiniz destek talebinin iletilebilmesi amacıyla FormSubmit hizmeti üzerinden geliştiriciye gönderilir. Bu işlem uygulamanın kendisinden bağımsızdır ve yalnızca destek formunu gönüllü olarak gönderdiğinizde gerçekleşir.</p>
-      <p>FormSubmit'in kendi veri işleme koşulları için <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit Gizlilik Politikası</a> sayfasını inceleyebilirsiniz.</p>
+      <div class="callout">
+        <strong>Destek formu ayrı bir web hizmetidir.</strong>
+        Destek sayfasındaki formu kullanmayı tercih ederseniz ad, e-posta, konu ve mesaj bilgileri destek talebini iletmek amacıyla FormSubmit üzerinden geliştiriciye gönderilir. Bu işlem yalnızca formu sizin göndermeniz halinde gerçekleşir.
+      </div>
+      <p>FormSubmit'in veri işleme koşulları için <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit Gizlilik Politikası</a> incelenebilir.</p>
 
       <h2>6. Yedekleme ve Dışa Aktarma</h2>
       <p>Kullanıcı uygulama içindeki yedekleme veya dışa aktarma özelliklerini kullanmayı tercih ederse oluşturulan dosyaların saklanması ve paylaşılması kullanıcının kontrolündedir.</p>
 
-      <h2>7. Gizlilik Politikasındaki Değişiklikler</h2>
+      <h2>7. Politika Değişiklikleri</h2>
       <p>Uygulamaya gelecekte reklam, analiz hizmetleri, çevrimiçi hesap sistemi veya kullanıcı verilerinin işlenmesini değiştiren başka özellikler eklenmesi halinde bu gizlilik politikası güncellenecektir.</p>
 
-      <h2>8. İletişim ve Destek Formu</h2>
-      <p>Mesai Takip ile ilgili gizlilik soruları için <a href="./support/">Destek sayfasını</a> kullanabilirsiniz. Destek formuna girdiğiniz bilgiler yalnızca talebinizi yanıtlamak amacıyla kullanılır.</p>
-      <p>Geliştirici: Yücel Sönmez</p>
+      <h2>8. İletişim</h2>
+      <p>Gizlilik veya uygulama ile ilgili sorular için <a href="./support/">Mesai Takip Destek</a> sayfasını kullanabilirsiniz. Destek formuna girdiğiniz bilgiler yalnızca talebinizi değerlendirmek ve yanıtlamak amacıyla kullanılır.</p>
+      <p class="small-note">Geliştirici: Yücel Sönmez</p>
     </article>
-
-    <div class="footer">
-      <a href="./support/">Destek sayfasına git</a>
-    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© 2026 Mesai Takip · Yücel Sönmez</span>
+      <nav class="footer-links" aria-label="Alt menü"><a href="./">Gizlilik</a><a href="./support/">Destek</a></nav>
+    </div>
+  </footer>
 </body>
 </html>
