@@ -3,49 +3,219 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
   <title>Mesai Takip - Destek</title>
   <meta name="description" content="Mesai Takip uygulaması destek sayfası">
   <style>
-    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8f8;
+      --surface: #ffffff;
+      --text: #16211f;
+      --muted: #64706d;
+      --border: #dfe7e5;
+      --accent: #0f766e;
+      --accent-soft: #e7f5f2;
+      --shadow: 0 16px 40px rgba(15, 118, 110, .08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1514;
+        --surface: #151d1b;
+        --text: #edf4f2;
+        --muted: #a7b3b0;
+        --border: #293432;
+        --accent: #5eead4;
+        --accent-soft: #16312d;
+        --shadow: none;
+      }
+    }
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 40px 20px 64px;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
-    h1 { margin-bottom: 8px; }
-    h2 { margin-top: 28px; }
-    .muted { opacity: .68; }
-    .card {
-      border: 1px solid rgba(127,127,127,.25);
-      border-radius: 16px;
-      padding: 24px;
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
     }
-    a { word-break: break-word; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      font-size: 18px;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 650;
+      padding: 9px 12px;
+      border-radius: 10px;
+    }
+    .links a:hover,
+    .links a[aria-current="page"] {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    main { padding: 48px 0 72px; }
+    .hero { margin-bottom: 24px; }
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: 750;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      margin: 0 0 10px;
+    }
+    .lead { color: var(--muted); margin: 0; font-size: 17px; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: clamp(24px, 5vw, 42px);
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-size: 20px;
+      letter-spacing: -.015em;
+      margin: 32px 0 10px;
+    }
+    h2:first-of-type { margin-top: 4px; }
+    .faq {
+      border-top: 1px solid var(--border);
+      padding: 18px 0;
+    }
+    .faq:first-of-type { border-top: 0; padding-top: 4px; }
+    .faq strong { display: block; margin-bottom: 5px; }
+    .faq p { margin: 0; color: var(--muted); }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 10px 16px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 750;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--surface);
+    }
+    .button.primary {
+      color: #fff;
+      background: #0f766e;
+      border-color: #0f766e;
+    }
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    @media (max-width: 560px) {
+      .nav { min-height: 62px; }
+      .brand { font-size: 16px; }
+      .links a { padding: 8px 9px; font-size: 14px; }
+      main { padding-top: 32px; }
+      .button { width: 100%; }
+    }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Mesai Takip Destek</h1>
-    <p class="muted">Mesai Takip uygulaması için yardım ve destek sayfası.</p>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="../">Mesai Takip</a>
+      <nav class="links" aria-label="Ana menü">
+        <a href="../">Gizlilik</a>
+        <a href="./" aria-current="page">Destek</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>Uygulama Hakkında</h2>
-    <p>Mesai Takip; maaş, mesai, izin, rapor, avans, kesinti ve çalışma kayıtlarını cihaz üzerinde takip etmeye yardımcı olur.</p>
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Yardım Merkezi</span>
+      <h1>Mesai Takip Destek</h1>
+      <p class="lead">Uygulamayla ilgili sık sorulan sorular, destek ve gizlilik bağlantıları.</p>
+    </section>
 
-    <h2>Sık Karşılaşılan Konular</h2>
-    <p><strong>Verilerim nerede saklanıyor?</strong><br>Mevcut sürümde kayıtlar cihazınızda yerel olarak saklanır.</p>
-    <p><strong>Hesap oluşturmam gerekiyor mu?</strong><br>Hayır. Mevcut sürümde üyelik veya giriş sistemi bulunmamaktadır.</p>
-    <p><strong>Yedekleme yapabilir miyim?</strong><br>Evet. Uygulama içindeki yedekleme ve dışa aktarma seçeneklerini kullanabilirsiniz.</p>
+    <article class="card">
+      <h2>Uygulama Hakkında</h2>
+      <p>Mesai Takip; maaş, mesai, izin, rapor, avans, kesinti ve çalışma kayıtlarını cihaz üzerinde takip etmeye yardımcı olur.</p>
 
-    <h2>Destek Talebi</h2>
-    <p>Bir hata bildirimi, öneri veya destek talebi için aşağıdaki GitHub Issues sayfasını kullanabilirsiniz:</p>
-    <p><a href="https://github.com/yucelsonmez59-tech/mesaitakip-privacy/issues">Mesai Takip Destek Talepleri</a></p>
+      <h2>Sık Karşılaşılan Konular</h2>
 
-    <h2>Gizlilik Politikası</h2>
-    <p><a href="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/">Gizlilik Politikasını Görüntüle</a></p>
+      <div class="faq">
+        <strong>Verilerim nerede saklanıyor?</strong>
+        <p>Mevcut sürümde kayıtlar cihazınızda yerel olarak saklanır.</p>
+      </div>
 
-    <p class="muted">Geliştirici: Yücel Sönmez</p>
+      <div class="faq">
+        <strong>Hesap oluşturmam gerekiyor mu?</strong>
+        <p>Hayır. Mevcut sürümde üyelik veya giriş sistemi bulunmamaktadır.</p>
+      </div>
+
+      <div class="faq">
+        <strong>Yedekleme yapabilir miyim?</strong>
+        <p>Evet. Uygulama içindeki yedekleme ve dışa aktarma seçeneklerini kullanabilirsiniz.</p>
+      </div>
+
+      <h2>Destek Talebi</h2>
+      <p>Bir hata bildirimi, öneri veya destek talebi için GitHub üzerinden yeni bir destek kaydı oluşturabilirsiniz.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/yucelsonmez59-tech/mesaitakip-privacy/issues/new">Destek Talebi Oluştur</a>
+        <a class="button" href="https://github.com/yucelsonmez59-tech/mesaitakip-privacy/issues">Mevcut Talepleri Görüntüle</a>
+      </div>
+
+      <h2>Gizlilik</h2>
+      <p>Verilerin nasıl saklandığını ve mevcut sürümde hangi servislerin kullanılmadığını Gizlilik Politikası sayfasında inceleyebilirsiniz.</p>
+      <div class="actions">
+        <a class="button" href="../">Gizlilik Politikasını Görüntüle</a>
+      </div>
+
+      <p style="margin-top:32px;color:var(--muted)">Geliştirici: Yücel Sönmez</p>
+    </article>
+
+    <div class="footer">Mesai Takip</div>
   </main>
 </body>
 </html>
