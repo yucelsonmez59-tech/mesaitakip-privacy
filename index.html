@@ -3,59 +3,184 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f766e">
   <title>Mesai Takip - Gizlilik Politikası</title>
   <meta name="description" content="Mesai Takip uygulaması gizlilik politikası">
   <style>
-    :root { color-scheme: light dark; }
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f8f8;
+      --surface: #ffffff;
+      --text: #16211f;
+      --muted: #64706d;
+      --border: #dfe7e5;
+      --accent: #0f766e;
+      --accent-soft: #e7f5f2;
+      --shadow: 0 16px 40px rgba(15, 118, 110, .08);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1514;
+        --surface: #151d1b;
+        --text: #edf4f2;
+        --muted: #a7b3b0;
+        --border: #293432;
+        --accent: #5eead4;
+        --accent-soft: #16312d;
+        --shadow: none;
+      }
+    }
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 40px 20px 64px;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
-    h1 { margin-bottom: 8px; }
-    h2 { margin-top: 28px; }
-    .date { opacity: .65; margin-bottom: 32px; }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .brand {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      font-size: 18px;
+    }
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-weight: 650;
+      padding: 9px 12px;
+      border-radius: 10px;
+    }
+    .links a:hover,
+    .links a[aria-current="page"] {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+    main { padding: 48px 0 72px; }
+    .hero { margin-bottom: 24px; }
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      background: var(--accent-soft);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 13px;
+      font-weight: 750;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      margin: 0 0 10px;
+    }
+    .date { color: var(--muted); margin: 0; }
     .card {
-      border: 1px solid rgba(127,127,127,.25);
-      border-radius: 16px;
-      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: clamp(24px, 5vw, 42px);
+      box-shadow: var(--shadow);
+    }
+    h2 {
+      font-size: 20px;
+      letter-spacing: -.015em;
+      margin: 32px 0 8px;
+    }
+    h2:first-of-type { margin-top: 24px; }
+    p { margin: 8px 0 14px; }
+    .footer {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+    .footer a { color: var(--accent); text-decoration: none; font-weight: 650; }
+    @media (max-width: 560px) {
+      .nav { min-height: 62px; }
+      .brand { font-size: 16px; }
+      .links a { padding: 8px 9px; font-size: 14px; }
+      main { padding-top: 32px; }
     }
   </style>
 </head>
 <body>
-  <main class="card">
-    <h1>Mesai Takip Gizlilik Politikası</h1>
-    <p class="date">Son güncelleme: 28 Eylül 2026</p>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./">Mesai Takip</a>
+      <nav class="links" aria-label="Ana menü">
+        <a href="./" aria-current="page">Gizlilik</a>
+        <a href="./support/">Destek</a>
+      </nav>
+    </div>
+  </header>
 
-    <p>Mesai Takip, kullanıcıların çalışma, mesai, maaş, izin, rapor, avans, kesinti ve benzeri çalışma kayıtlarını takip etmelerine yardımcı olmak amacıyla geliştirilmiştir.</p>
+  <main class="wrap">
+    <section class="hero">
+      <span class="eyebrow">Yasal</span>
+      <h1>Gizlilik Politikası</h1>
+      <p class="date">Son güncelleme: 28 Eylül 2026</p>
+    </section>
 
-    <h2>1. Toplanan Veriler</h2>
-    <p>Mesai Takip'in mevcut sürümü kullanıcılarından herhangi bir kişisel veri toplamaz, geliştiriciye veya üçüncü taraflara göndermez.</p>
-    <p>Uygulamaya girilen maaş, mesai, izin, rapor, avans, kesinti ve diğer kayıtlar kullanıcının kendi cihazında yerel olarak saklanır.</p>
+    <article class="card">
+      <p>Mesai Takip, kullanıcıların çalışma, mesai, maaş, izin, rapor, avans, kesinti ve benzeri çalışma kayıtlarını takip etmelerine yardımcı olmak amacıyla geliştirilmiştir.</p>
 
-    <h2>2. Hesap ve Üyelik</h2>
-    <p>Mesai Takip'te kullanıcı hesabı oluşturma, üyelik veya giriş sistemi bulunmamaktadır.</p>
+      <h2>1. Toplanan Veriler</h2>
+      <p>Mesai Takip'in mevcut sürümü kullanıcılarından herhangi bir kişisel veri toplamaz, geliştiriciye veya üçüncü taraflara göndermez.</p>
+      <p>Uygulamaya girilen maaş, mesai, izin, rapor, avans, kesinti ve diğer kayıtlar kullanıcının kendi cihazında yerel olarak saklanır.</p>
 
-    <h2>3. Sunucu ve Bulut Hizmetleri</h2>
-    <p>Uygulamanın mevcut sürümünde kullanıcı verilerini saklayan bir sunucu veya bulut tabanlı kullanıcı hesabı sistemi bulunmamaktadır.</p>
+      <h2>2. Hesap ve Üyelik</h2>
+      <p>Mesai Takip'te kullanıcı hesabı oluşturma, üyelik veya giriş sistemi bulunmamaktadır.</p>
 
-    <h2>4. Reklam ve Analitik</h2>
-    <p>Mesai Takip'in mevcut sürümünde reklam ağı, kullanıcı takip sistemi veya üçüncü taraf analiz hizmeti kullanılmamaktadır.</p>
+      <h2>3. Sunucu ve Bulut Hizmetleri</h2>
+      <p>Uygulamanın mevcut sürümünde kullanıcı verilerini saklayan bir sunucu veya bulut tabanlı kullanıcı hesabı sistemi bulunmamaktadır.</p>
 
-    <h2>5. Veri Paylaşımı</h2>
-    <p>Mesai Takip kullanıcı verilerini üçüncü taraflarla paylaşmaz.</p>
+      <h2>4. Reklam ve Analitik</h2>
+      <p>Mesai Takip'in mevcut sürümünde reklam ağı, kullanıcı takip sistemi veya üçüncü taraf analiz hizmeti kullanılmamaktadır.</p>
 
-    <h2>6. Yedekleme ve Dışa Aktarma</h2>
-    <p>Kullanıcı uygulama içindeki yedekleme veya dışa aktarma özelliklerini kullanmayı tercih ederse oluşturulan dosyaların saklanması ve paylaşılması kullanıcının kontrolündedir.</p>
+      <h2>5. Veri Paylaşımı</h2>
+      <p>Mesai Takip kullanıcı verilerini üçüncü taraflarla paylaşmaz.</p>
 
-    <h2>7. Gizlilik Politikasındaki Değişiklikler</h2>
-    <p>Uygulamaya gelecekte reklam, analiz hizmetleri, çevrimiçi hesap sistemi veya kullanıcı verilerinin işlenmesini değiştiren başka özellikler eklenmesi halinde bu gizlilik politikası güncellenecektir.</p>
+      <h2>6. Yedekleme ve Dışa Aktarma</h2>
+      <p>Kullanıcı uygulama içindeki yedekleme veya dışa aktarma özelliklerini kullanmayı tercih ederse oluşturulan dosyaların saklanması ve paylaşılması kullanıcının kontrolündedir.</p>
 
-    <h2>8. İletişim</h2>
-    <p>Mesai Takip ile ilgili gizlilik soruları için geliştirici ile iletişime geçebilirsiniz.</p>
-    <p>Geliştirici: Yücel Sönmez</p>
+      <h2>7. Gizlilik Politikasındaki Değişiklikler</h2>
+      <p>Uygulamaya gelecekte reklam, analiz hizmetleri, çevrimiçi hesap sistemi veya kullanıcı verilerinin işlenmesini değiştiren başka özellikler eklenmesi halinde bu gizlilik politikası güncellenecektir.</p>
+
+      <h2>8. İletişim</h2>
+      <p>Mesai Takip ile ilgili gizlilik soruları için <a href="./support/">Destek sayfasını</a> kullanabilirsiniz.</p>
+      <p>Geliştirici: Yücel Sönmez</p>
+    </article>
+
+    <div class="footer">
+      <a href="./support/">Destek sayfasına git</a>
+    </div>
   </main>
 </body>
 </html>
