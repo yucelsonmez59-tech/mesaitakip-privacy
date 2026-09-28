@@ -145,6 +145,47 @@
       background: #0f766e;
       border-color: #0f766e;
     }
+    .support-form { margin-top: 18px; }
+    .field-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .field { margin-bottom: 16px; }
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 13px;
+      background: var(--bg);
+      color: var(--text);
+      font: inherit;
+      outline: none;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    .field textarea { resize: vertical; min-height: 150px; }
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 18%, transparent);
+    }
+    .form-note {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+      margin: 4px 0 16px;
+    }
+    .form-note a { color: var(--accent); }
+    .submit-button { border: 0; cursor: pointer; }
     .footer {
       margin-top: 24px;
       color: var(--muted);
@@ -157,6 +198,7 @@
       .links a { padding: 8px 9px; font-size: 14px; }
       main { padding-top: 32px; }
       .button { width: 100%; }
+      .field-row { grid-template-columns: 1fr; gap: 0; }
     }
   </style>
 </head>
@@ -200,11 +242,46 @@
       </div>
 
       <h2>Destek Talebi</h2>
-      <p>Bir hata bildirimi, öneri veya destek talebi için GitHub üzerinden yeni bir destek kaydı oluşturabilirsiniz.</p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/yucelsonmez59-tech/mesaitakip-privacy/issues/new">Destek Talebi Oluştur</a>
-        <a class="button" href="https://github.com/yucelsonmez59-tech/mesaitakip-privacy/issues">Mevcut Talepleri Görüntüle</a>
-      </div>
+      <p>Aşağıdaki formu doldurun. Talebiniz doğrudan Mesai Takip destek e-posta adresine iletilir.</p>
+
+      <form class="support-form" action="https://formsubmit.co/yucel.sonmez2710@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Yeni Mesai Takip Destek Talebi">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://yucelsonmez59-tech.github.io/mesaitakip-privacy/support/thanks.html">
+        <input type="text" name="_honey" style="display:none">
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Ad Soyad</label>
+            <input id="name" name="Ad Soyad" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">E-posta</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="subject">Konu</label>
+          <select id="subject" name="Konu" required>
+            <option value="" selected disabled>Bir konu seçin</option>
+            <option>Teknik sorun</option>
+            <option>Hesaplama / kayıt sorunu</option>
+            <option>Yedekleme / geri yükleme</option>
+            <option>Öneri</option>
+            <option>Diğer</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Mesaj</label>
+          <textarea id="message" name="Mesaj" rows="7" minlength="10" placeholder="Yaşadığınız sorunu veya talebinizi mümkün olduğunca açık şekilde yazın." required></textarea>
+        </div>
+
+        <p class="form-note">Formu göndererek, yazdığınız bilgilerin destek talebinizi iletmek amacıyla FormSubmit üzerinden işlenmesini kabul etmiş olursunuz. Ayrıntılar için <a href="../">Gizlilik Politikası</a>.</p>
+
+        <button class="button primary submit-button" type="submit">Destek Talebi Gönder</button>
+      </form>
 
       <h2>Gizlilik</h2>
       <p>Verilerin nasıl saklandığını ve mevcut sürümde hangi servislerin kullanılmadığını Gizlilik Politikası sayfasında inceleyebilirsiniz.</p>
